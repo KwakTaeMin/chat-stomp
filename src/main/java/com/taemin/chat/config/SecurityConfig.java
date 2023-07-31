@@ -1,6 +1,6 @@
 package com.taemin.chat.config;
 
-import com.taemin.chat.service.OAuthService;
+import com.taemin.user.service.OAuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -28,7 +28,14 @@ public class SecurityConfig {
                     auth.requestMatchers("/").permitAll();
                     auth.anyRequest().authenticated();
                 })
-                .oauth2Login(Customizer.withDefaults()) // OAUTH2.0 google 로그인 허용
+                .oauth2Login(config -> {
+                    config.userInfoEndpoint(userInfoEndpointConfig -> {
+                        userInfoEndpointConfig.userService(oAuthService);
+                    });
+                    //config.successHandler()
+                    config.defaultSuccessUrl("/");
+                }) // OAUTH2.0 google 로그인 허용
+
                 .formLogin(formLogin -> formLogin.disable()) // 기본 로그인 허용 X
                 .cors(Customizer.withDefaults()) // CORS 기본 CorsConfigurationSource 사용
                 .csrf(csrf -> csrf.disable()) // CSRF 방어 로직

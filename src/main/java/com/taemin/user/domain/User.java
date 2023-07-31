@@ -1,4 +1,4 @@
-package com.taemin.chat.domain;
+package com.taemin.user.domain;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
@@ -6,6 +6,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
@@ -13,6 +14,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity
 @Getter
+@DynamicUpdate
 @Table(name = "user")
 public class User {
 
@@ -39,13 +41,17 @@ public class User {
     private LocalDateTime updatedAt;
 
     @Builder
-    public User(Long id, String name, String email, String provider, String nickname, LocalDateTime createdAt, LocalDateTime updatedAt) {
+    public User(Long id, String name, String email, String provider, String nickname) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.provider = provider;
         this.nickname = nickname;
-        this.createdAt = createdAt;
-        this.updatedAt = updatedAt;
+    }
+
+    public User update(String name, String email) {
+        this.name = name;
+        this.email = email;
+        return this;
     }
 }
