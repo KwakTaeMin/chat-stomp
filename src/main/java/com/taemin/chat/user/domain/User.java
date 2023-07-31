@@ -1,4 +1,4 @@
-package com.taemin.user.domain;
+package com.taemin.chat.user.domain;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
@@ -31,7 +31,7 @@ public class User {
     @Column(nullable = false)
     private String provider;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private String nickname;
 
     @CreationTimestamp

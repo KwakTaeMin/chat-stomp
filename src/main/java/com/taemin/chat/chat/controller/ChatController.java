@@ -1,4 +1,4 @@
-package com.taemin.chat.controller;
+package com.taemin.chat.chat.controller;
 
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;

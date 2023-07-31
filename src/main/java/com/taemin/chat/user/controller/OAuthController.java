@@ -1,4 +1,4 @@
-package com.taemin.user.controller;
+package com.taemin.chat.user.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

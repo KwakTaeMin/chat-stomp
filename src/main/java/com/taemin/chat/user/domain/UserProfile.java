@@ -1,4 +1,4 @@
-package com.taemin.user.domain;
+package com.taemin.chat.user.domain;
 
 import lombok.Getter;
 import lombok.Setter;

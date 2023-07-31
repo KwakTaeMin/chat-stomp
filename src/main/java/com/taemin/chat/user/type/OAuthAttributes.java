@@ -1,6 +1,6 @@
-package com.taemin.user.type;
+package com.taemin.chat.user.type;
 
-import com.taemin.user.domain.UserProfile;
+import com.taemin.chat.user.domain.UserProfile;
 
 import java.util.Arrays;
 import java.util.Map;

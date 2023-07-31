@@ -1,6 +1,6 @@
-package com.taemin.chat.config;
+package com.taemin.chat.user.config;
 
-import com.taemin.user.service.OAuthService;
+import com.taemin.chat.user.service.OAuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -25,7 +25,13 @@ public class SecurityConfig {
     protected SecurityFilterChain webSecurityFilterChain(HttpSecurity http) throws Exception {
         return http
                 .authorizeHttpRequests(auth -> {
-                    auth.requestMatchers("/").permitAll();
+                    auth.requestMatchers(
+                            "/",
+                            "/login/*",
+                            "/logout",
+                            "/favicon.*",
+                            "/error"
+                    ).permitAll();
                     auth.anyRequest().authenticated();
                 })
                 .oauth2Login(config -> {

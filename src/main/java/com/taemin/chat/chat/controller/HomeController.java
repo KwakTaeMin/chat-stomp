@@ -1,4 +1,4 @@
-package com.taemin.chat.controller;
+package com.taemin.chat.chat.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

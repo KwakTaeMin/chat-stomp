@@ -1,6 +1,6 @@
-package com.taemin.user.repository;
+package com.taemin.chat.user.repository;
 
-import com.taemin.user.domain.User;
+import com.taemin.chat.user.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

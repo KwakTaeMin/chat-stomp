@@ -1,9 +1,9 @@
-package com.taemin.user.service;
+package com.taemin.chat.user.service;
 
-import com.taemin.user.domain.UserProfile;
-import com.taemin.user.type.OAuthAttributes;
-import com.taemin.user.domain.User;
-import com.taemin.user.repository.UserRepository;
+import com.taemin.chat.user.domain.User;
+import com.taemin.chat.user.type.OAuthAttributes;
+import com.taemin.chat.user.domain.UserProfile;
+import com.taemin.chat.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;
