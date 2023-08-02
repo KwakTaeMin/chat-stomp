@@ -26,3 +26,5 @@
 
 - Spring Security를 이용하여 OAuth2 사용해 구글 로그인하여 사용자가 회원가입 및 로그인을 진행하도록 수정
 - CORS 설정하여 내 front-end client만 접근 가능하도록 설정
+- Spring Basic Login으로 일단 OAuth 테스트 진행하여 Docker Mysql DB에 User Table 저장 확인
+- Spring Security Test Code 작성 필요
