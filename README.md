@@ -28,3 +28,8 @@
 - CORS 설정하여 내 front-end client만 접근 가능하도록 설정
 - Spring Basic Login으로 일단 OAuth 테스트 진행하여 Docker Mysql DB에 User Table 저장 확인
 - Spring Security Test Code 작성 필요
+
+### Flutter Frontend 개발 예정 
+
+- dart 언어 및 flutter web 및 android ios 개발
+- 
