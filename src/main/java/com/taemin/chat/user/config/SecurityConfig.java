@@ -41,7 +41,7 @@ public class SecurityConfig {
                     //config.successHandler()
                     config.defaultSuccessUrl("/");
                 }) // OAUTH2.0 google 로그인 허용
-
+                .logout(Customizer.withDefaults())
                 .formLogin(formLogin -> formLogin.disable()) // 기본 로그인 허용 X
                 .cors(Customizer.withDefaults()) // CORS 기본 CorsConfigurationSource 사용
                 .csrf(csrf -> csrf.disable()) // CSRF 방어 로직
